@@ -1,0 +1,117 @@
+<!-- ========== Left Sidebar Start ========== -->
+<div class="leftside-menu" style="position: fixed; height: 100vh;">
+
+    <!-- Brand Logo Light -->
+    <a href="index" class="logo logo-light">
+        <span class="logo-lg">
+            <img src="assets/images/j big.png" alt="logo">
+        </span>
+        <span class="logo-sm">
+            <img src="assets/images/logo-smpk.png" alt="small logo">
+        </span>
+    </a>
+
+    <!-- Brand Logo Dark -->
+    <a href="index" class="logo logo-dark">
+        <span class="logo-lg">
+            <img src="assets/images/j big.png" alt="dark logo">
+        </span>
+        <span class="logo-sm">
+            <img src="assets/images/logo-smpk.png" alt="small logo">
+        </span>
+    </a>
+
+    <!-- Sidebar Hover Menu Toggle Button -->
+    <div class="button-sm-hover" data-bs-toggle="tooltip" data-bs-placement="right" title="Show Full Sidebar">
+        <i class="ri-checkbox-blank-circle-line align-middle"></i>
+    </div>
+
+    <!-- Full Sidebar Menu Close Button -->
+    <div class="button-close-fullsidebar">
+        <i class="ri-close-fill align-middle"></i>
+    </div>
+
+    <!-- Sidebar -left -->
+    <div class="h-100" id="leftside-menu-container" data-simplebar>
+        <!-- Leftbar User -->
+        <html data-sidenav-user="true" data-sidenav-size="condensed">
+        <div class="leftbar-user">
+            <a href="index">
+                <img src="assets/images/ironbatman.jpeg" alt="user-image" height="42"
+                    class="img-fluid avatar-xl rounded">
+                <span class="leftbar-user-name mt-2">Jaymin Rabari</span>
+                <span class="badge bg-success-subtle text-success">Software Engineer</span>
+            </a>
+        </div>
+
+        <!--- Sidemenu -->
+        <ul class="side-nav">
+
+            <!-- About-->
+            <li class="side-nav-item">
+                <a href="index" class="side-nav-link">
+                    <i class="bi bi-person-lines-fill"></i>
+                    <span> About </span>
+                </a>
+            </li>
+
+            <!-- Resume-->
+            <li class="side-nav-item">
+                <a href="resume" class="side-nav-link">
+                    <i class="bi bi-file-earmark-text"></i>
+                    <span> Resume </span>
+                </a>
+            </li>
+
+            <!-- Portfolio-->
+            <li class="side-nav-item">
+                <a href="portfolio" class="side-nav-link">
+                    <i class="bi bi-stack"></i>
+                    <span> Portfolio </span>
+                </a>
+            </li>
+
+            <!-- Blog-->
+            <li class="side-nav-item">
+                <a href="blog" class="side-nav-link">
+                    <i class="bi bi-card-list"></i>
+                    <span> Blog </span>
+                </a>
+            </li>
+
+            <!-- Contact -->
+            <li class="side-nav-item">
+                <a href="contact" class="side-nav-link">
+                    <i class="bi bi-person-rolodex"></i>
+                    <span> Contact </span>
+                </a>
+            </li>
+
+        </ul>
+        <!--- End Sidemenu -->
+
+        <div class="clearfix"></div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+$(document).ready(function() {
+    $('.side-nav-link').click(function(e) {
+        e.preventDefault();
+        var href = $(this).attr('href');
+
+        // Add transition classes to the content area
+        $('.content').addClass('content-hide');
+
+        // Delay to simulate loading time (optional)
+        setTimeout(function() {
+            window.location.href = href;
+        }, 300); // Adjust delay as needed to match CSS transition duration
+    });
+});
+</script>
+<!-- ========== Left Sidebar End ========== -->
